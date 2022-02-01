@@ -4,7 +4,7 @@ Prezado cliente, viemos por meio desse e-mail informa-lo sobre as descisões tom
 
 ## PALETA DE CORES
 A paleta de cores foi definida pensando em tons simples e elegantes e ao mesmo tempo tentamos manter uma pegada minimalista utilizando outros tons de uma mesma cor.
-As cores escolhidas criarão um design único e memorável para a plataforma.
+As cores escolhidas criarão um design único e memorável para sua plataforma.
 Segue abaixo paleta de cores:
 
 - ![#1B0034](https://via.placeholder.com/15/1B0034?text=+) `#1B0034`
