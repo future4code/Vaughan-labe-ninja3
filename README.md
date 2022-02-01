@@ -7,7 +7,7 @@ A paleta de cores foi definida pensando em tons simples e elegantes e ao mesmo t
 As cores escolhidas criarão um design único e memorável para a plataforma.
 Segue abaixo paleta de cores:
 
-- ![#1B0034](https://via.placeholder.com/1B0034/000000?text=+) `#1B0034`
+- ![#1B0034](https://via.placeholder.com/15/1B0034?text=+) `#1B0034`
 - ![#756684](https://via.placeholder.com/15/756684/000000?text=+) `#756684`
 - ![#E6BC0F](https://via.placeholder.com/15/E6BC0F/000000?text=+) `#E6BC0F`
 
