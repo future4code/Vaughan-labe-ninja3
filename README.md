@@ -1,4 +1,4 @@
-# Labeninjas
+# LABENINJAS
 
 Prezado cliente, viemos por meio desse e-mail informa-lo sobre as descisões tomadas a cerca do projeto labeninjas, onde foram definidos os detalhes do projeto como, as paletas de cores e layout. 
 
@@ -17,8 +17,8 @@ Segue abaixo paleta de cores:
 ## LAYOUT DO SITE
 Segue em anexo o link contendo o layout das páginas do site para uma melhor apreciação do cliente.
 
-- https://www.canva.com/design/DAE3JT6YxgI/_ZbuFMKoI3tBdXK12zOfiw/view?utm_content=DAE3JT6YxgI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
-- https://www.canva.com/design/DAE3JRj4BoI/VXOpFF817QWo1KW68xdQwg/view?utm_content=DAE3JRj4BoI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+- https://drive.google.com/file/d/116UqOaD3zf_CSNukUJ-xn9tkDA0iHTIQ/view?usp=sharing
+- https://drive.google.com/file/d/1OPO6aaIiJXbpiaGZoWKC1dSJtDABrfox/view?usp=sharing
 
 As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe. Iniciaremos a construção do site mediante sua aprovação.
 Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
