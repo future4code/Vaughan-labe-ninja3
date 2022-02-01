@@ -10,13 +10,9 @@ Segue abaixo paleta de cores:
 - ![#1B0034](https://via.placeholder.com/15/1B0034?text=+) `#1B0034`
 - ![#756684](https://via.placeholder.com/15/756684/000000?text=+) `#756684`
 - ![#E6BC0F](https://via.placeholder.com/15/E6BC0F/000000?text=+) `#E6BC0F`
-
-#1B0034
-#756684
-#E6BC0F
-#F8E59B
-#F0F0F0
-#FFFFFF
+- ![#F8E59B](https://via.placeholder.com/15/F8E59B/000000?text=+) `#F8E59B`
+- ![#F0F0F0](https://via.placeholder.com/15/F0F0F0/000000?text=+) `#F0F0F0`
+- ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF`
 
 As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe. Iniciaremos o mesmo mediante a sua aprovação.
 Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
