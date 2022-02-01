@@ -14,5 +14,11 @@ Segue abaixo paleta de cores:
 - ![#F0F0F0](https://via.placeholder.com/15/F0F0F0/000000?text=+) `#F0F0F0`
 - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF`
 
-As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe. Iniciaremos o mesmo mediante a sua aprovação.
+## LAYOUT DO SITE
+Segue em anexo o link contendo o layout das páginas do site para uma melhor apreciação do cliente.
+
+- https://www.canva.com/design/DAE3JT6YxgI/_ZbuFMKoI3tBdXK12zOfiw/view?utm_content=DAE3JT6YxgI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+- https://www.canva.com/design/DAE3JRj4BoI/VXOpFF817QWo1KW68xdQwg/view?utm_content=DAE3JRj4BoI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+
+As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe. Iniciaremos a construção do site mediante sua aprovação.
 Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
