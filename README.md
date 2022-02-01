@@ -20,5 +20,6 @@ Segue em anexo o link contendo o layout das páginas do site para uma melhor apr
 - https://drive.google.com/file/d/116UqOaD3zf_CSNukUJ-xn9tkDA0iHTIQ/view?usp=sharing
 - https://drive.google.com/file/d/1OPO6aaIiJXbpiaGZoWKC1dSJtDABrfox/view?usp=sharing
 
-As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe. Iniciaremos a construção do site mediante sua aprovação.
+As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe e iniciaremos a construção do site mediante sua aprovação.
+
 Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
