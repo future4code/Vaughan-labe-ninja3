@@ -72,6 +72,7 @@ class App extends React.Component {
 		return (
 			<div>
 
+        gledson-card-carrinho
 				{this.ChangeScreen()}
 
 			</div>
