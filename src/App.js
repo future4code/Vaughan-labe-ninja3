@@ -6,7 +6,7 @@ import Global from './AppStyled'
 
 class App extends React.Component {
 	state = {
-		page: "Home",
+		page: "Carrinho",
 		cart: [],
 		priceAll: 0
 	}
@@ -79,7 +79,6 @@ class App extends React.Component {
 			<>
 			    <Global />
 				{this.ChangeScreen()}
-
 			</>
 		)
 	}
