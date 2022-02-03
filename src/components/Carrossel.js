@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Imagem1 from "./img/1.png";
-import Imagem2 from "./img/2.png";
-import Imagem3 from "./img/3.png";
-import Imagem4 from "./img/4.png";
-import Imagem5 from "./img/5.png";
-import Imagem6 from "./img/6.png";
+import Imagem1 from "../assets/1.png";
+import Imagem2 from "../assets/2.png";
+import Imagem3 from "../assets/3.png";
+import Imagem4 from "../assets/4.png";
+import Imagem5 from "../assets/5.png";
+import Imagem6 from "../assets/6.png";
 
 
 const CarrosselMascara = styled.section `

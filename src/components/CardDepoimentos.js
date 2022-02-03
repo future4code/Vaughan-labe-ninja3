@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Aspas from "./img/aspas.png"
-import Pessoa1 from "./img/Pessoa1.png"
-import Pessoa2 from "./img/Pessoa2.png"
-import Pessoa3 from "./img/Pessoa3.png"
-import Pessoa4 from "./img/Pessoa4.png"
+import Aspas from "../assets/aspas.png";
+import Pessoa1 from "../assets/Pessoa1.png"
+import Pessoa2 from "../assets/Pessoa2.png"
+import Pessoa3 from "../assets/Pessoa3.png"
+import Pessoa4 from "../assets/Pessoa4.png"
 
 const DivContainer = styled.div`
     display: flex;

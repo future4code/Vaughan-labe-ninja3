@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import CardDepoimentos from "../components/CardDepoimentos"
-import Logo from "../components/img/Logomarca.png"
-import Carrossel from "../components/Carrossel";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import CardDepoimentos from "../Components/CardDepoimentos"
+import Logo from "../assets/Logomarca.png"
+import Carrossel from "../Components/Carrossel";
 
 const DivIntro = styled.div`
     background-color: #F0F0F0;

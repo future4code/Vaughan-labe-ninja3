@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "./img/logo-cabecalho.png"
-import Face from "./img/face.png"
-import Insta from "./img/insta.png"
-import Twitter from "./img/twitter.png"
-import Baixar1 from "./img/8.png"
-import Baixar2 from "./img/9.png"
+import Logo from "../assets/logo-cabecalho.png"
+import Face from "../assets/face.png"
+import Insta from "../assets/insta.png"
+import Twitter from "../assets/twitter.png"
+import Baixar1 from "../assets/8.png"
+import Baixar2 from "../assets/9.png"
 
 const DivContainer = styled.div`
     background-color: #1B0034;
