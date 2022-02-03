@@ -33,6 +33,7 @@ const ImgAspas = styled.img`
 const StyleCard = styled.div`
   margin: 20px;
   width: 20%;
+  height: 25rem;
   background-color: #F0F0F0;
   padding: 20px;
   border-radius: 8px;
@@ -100,7 +101,7 @@ class Header extends React.Component {
                         <p>A chance de aprender cada vez mais o que faço é incrível, 
                         o apoio que tenho é maravilhoso. Esse apoio que representa que 
                         quero continuar aqui.</p>
-                        <p>Júlio César, Agente de Atendimento</p>
+                        <p>Júlio César, Agente de Atendimentos</p>
                     </div>
                 </StyleCard>
                 
