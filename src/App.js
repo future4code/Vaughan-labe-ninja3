@@ -1,17 +1,13 @@
 import React from 'react'
-import LandingPage from './Pages/LandingPage'
 import styled from 'styled-components'
 import CardJobs from './Components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
-
-const ContainerLanding = styled.div`
-	background: #F0F0F0;
-
-`
+import LandingPage from './Pages/LandingPage'
+import Global from './AppStyled'
 
 class App extends React.Component {
 	state = {
-		page: "Carrinho",
+		page: "Home",
 		cart: [],
 		priceAll: 0
 	}
@@ -56,15 +52,19 @@ class App extends React.Component {
 		alert("Agradecemos a preferência, volte sempre!")
 		this.setState({priceAll: 0})
 	}
-	goToCarrinho = () => {
-		this.setState({page: "Carrinho"})
+	goToHome = () => {
+		this.setState({page: "Home"})
 	}
 	goToContratacao = () => {
 		this.setState({page: "Contratacao"})
 	}
-
+	goToCarrinho = () => {
+		this.setState({page: "Carrinho"})
+	}
 	ChangeScreen = () => {
 		switch (this.state.page) {
+			case "Home":
+				return <LandingPage contratar={this.goToContratacao} />
 			case "Contratacao":
 				return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho}/>
 			case "Carrinho":	
@@ -77,12 +77,10 @@ class App extends React.Component {
 	render() {
 
 		return (
-			<div>
-				<ContainerLanding>
-				<LandingPage/>
-				</ContainerLanding>
+			<>
+			    <Global />
 				{this.ChangeScreen()}
-			</div>
+			</>
 		)
 	}
 }

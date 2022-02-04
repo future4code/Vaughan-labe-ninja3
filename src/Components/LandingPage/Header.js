@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo-cabecalho.png"
+import Logo from "../../assets/logo-cabecalho.png"
 
 const DivContainer = styled.div`
     background-color: #1B0034;

@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
-import CardDepoimentos from "../Components/CardDepoimentos"
+import React from "react"
+import styled from "styled-components"
+import Header from "../Components/LandingPage/Header"
+import Footer from "../Components/LandingPage/Footer"
+import CardDepoimentos from "../Components/LandingPage/CardDepoimentos"
+import Carrossel from "../Components/LandingPage/Carrossel"
 import Logo from "../assets/Logomarca.png"
-import Carrossel from "../Components/Carrossel";
 
 const DivIntro = styled.div`
     background-color: #F0F0F0;
@@ -13,6 +13,7 @@ const DivIntro = styled.div`
     flex-direction: row-reverse;
     justify-content: space-evenly;
     gap: 50px;
+    height: 90vh;
 `
 const DivTextos = styled.div`
     display: flex;
@@ -38,18 +39,29 @@ const Img = styled.img`
 `
 
 const DivQuemSomos = styled.div`
-    margin-left: 10rem;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 50px;
 `
 const DivTexto2 = styled.div`
+    color: white;
+    background-color: #1B0034;
+    height: 90vh;
+    width: 115vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`
+
+const DivCarrossel2 = styled.div`
+    background-color: #D1C7DB;
+    height: 90vh;
+    width: 115vh;
     display: flex;
     flex-direction: column;
-    margin-right: 10rem;
-    margin-left: 10rem;
+    justify-content: center;
 `
 
 class LandingPage extends React.Component {
@@ -57,7 +69,8 @@ class LandingPage extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                
+                <Header/>
 
                 <DivIntro>
                     <div>
@@ -73,17 +86,16 @@ class LandingPage extends React.Component {
 
                         <DivBotoes>
                             <button>QUERO SER UM NINJA</button>
-                            <button>CONTRATE UM NINJA</button>
+                            <button onClick={this.props.contratar}>CONTRATE UM NINJA</button>
                         </DivBotoes>
                     </DivTB>
                 </DivIntro>
 
-                <CardDepoimentos/>
-
                 <DivQuemSomos>
-                    <div>
+
+                    <DivCarrossel2>
                     <Carrossel/>
-                    </div>
+                    </DivCarrossel2>
 
                     <DivTexto2>
                     <h1>O que é o Labeninjas?</h1>
@@ -99,7 +111,10 @@ class LandingPage extends React.Component {
                     que podemos ajudar a tornar realidade.
                     </p>
                     </DivTexto2>
+
                 </DivQuemSomos>
+
+                <CardDepoimentos/>
 
                 <Footer />
             </div>
