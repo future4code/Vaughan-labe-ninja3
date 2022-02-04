@@ -55,11 +55,16 @@ const ImgLogo = styled.img`
     height: 3rem;
 `
 const Lista = styled.li`
-    color: #F8E59B;
+    color: white;
     list-style: none;
     align-items: end;
     display: grid;
     grid-template-columns: 200px 200px;
+`
+
+const Separar = styled.div`
+    gap: 15px;
+    display: grid;
 `
 
 class Footer extends React.Component {
@@ -70,7 +75,7 @@ class Footer extends React.Component {
 
                 <DivContato>
 
-                    <div>
+                    <Separar>
                         <h4>SERVIÇOS</h4>
                         <Lista>
                             <li>Assistência Técnica</li>
@@ -84,24 +89,25 @@ class Footer extends React.Component {
                             <li>Eventos</li>
                             <li>Serviços Domésticos</li>
                         </Lista>
-                    </div>
+                    </Separar>
 
-                    <div>
+                    <Separar>
                         <h4>REDES SOCIAIS</h4>
                         <DivRedesSociais>
-                            <a href="https://pt-br.facebook.com/"><Img src={Face} alt="Ícone Facebook" /></a>
-                            <a href="https://www.instagram.com/"><Img src={Insta} alt="Ícone Instagram" /></a>
-                            <a href="https://twitter.com/"><Img src={Twitter} alt="Ícone Twitter" /></a>
+                            <a target="_blank" href="https://pt-br.facebook.com/"><Img src={Face} alt="Ícone Facebook" /></a>
+                            <a target="_blank" href="https://www.instagram.com/"><Img src={Insta} alt="Ícone Instagram" /></a>
+                            <a target="_blank" href="https://twitter.com/"><Img src={Twitter} alt="Ícone Twitter" /></a>
                         </DivRedesSociais>
-                    </div>
+                    </Separar>
 
-                    <div>
+                    <Separar>
                         <h4>DOWNLOADS</h4>
                         <DivImgDownload>
-                            <a href="https://play.google.com/store?hl=pt_BR&gl=US"><Img src={Baixar1} alt="Ícone Play Store" /></a>
-                            <a href="https://www.apple.com/br/store"><Img src={Baixar2} alt="Ícone Apple Store" /></a>
+                            <a target="_blank" href="https://play.google.com/store?hl=pt_BR&gl=US"><Img src={Baixar1} alt="Ícone Play Store" /></a>
+                            <a target="_blank" href="https://www.apple.com/br/store"><Img src={Baixar2} alt="Ícone Apple Store" /></a>
                         </DivImgDownload>
-                    </div>
+                    </Separar>
+
                 </DivContato>
 
                 <DivOutros>

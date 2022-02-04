@@ -2,7 +2,7 @@ import React from 'react'
 import Formulario from './Pages/Formulario';
 import CardJobs from './Components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
-import LandingPage from './Pages/LandingPage'
+import LandingPage from './Pages/Home/LandingPage'
 import Global from './AppStyled'
 
 class App extends React.Component {

@@ -69,13 +69,12 @@ const CarrosselContainer = styled.div`
     }
 `
 const Img = styled.img`
+    border-radius: 8px;
     width: 500px;
     height: 500px;
     height: auto;
     display: inline-block;
     vertical-align:top;
-    font-size: 16px;
-    margin: 0 auto;
 `
 
 class Carrossel extends React.Component {

@@ -1,83 +1,21 @@
 import React from "react"
-import styled from "styled-components"
-import Header from "../Components/LandingPage/Header"
-import Footer from "../Components/LandingPage/Footer"
-import CardDepoimentos from "../Components/LandingPage/CardDepoimentos"
-import Carrossel from "../Components/LandingPage/Carrossel"
-import Logo from "../assets/Logomarca.png"
-
-const DivIntro = styled.div`
-    background-color: #F0F0F0;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    gap: 50px;
-    height: 90vh;
-`
-const DivTextos = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 90px;
-    margin-right: 120px;
-`
-const DivBotoes = styled.div`
-    display: flex;
-    gap: 50px;
-`
-
-const DivTB = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-`
-
-const Img = styled.img`
-    height: 15rem;
-    margin: 90px;
-`
-
-const DivQuemSomos = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
-`
-const DivTexto2 = styled.div`
-    color: white;
-    background-color: #1B0034;
-    height: 90vh;
-    width: 115vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-`
-
-const DivCarrossel2 = styled.div`
-    background-color: #D1C7DB;
-    height: 90vh;
-    width: 115vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-`
+import { DivIntro, TextoQuemSomos, DivTextos, DivBotoes, DivTB, Img, DivQuemSomos, DivTexto2, DivCarrossel2, CardsStyle, TituloCards, Button, HeaderFixed} from "./Styled";
+import Header from "../../Components/LandingPage/Header"
+import Footer from "../../Components/LandingPage/Footer"
+import CardDepoimentos from "../../Components/LandingPage/CardDepoimentos"
+import Carrossel from "../../Components/LandingPage/Carrossel"
+import Logo from "../../assets/Logomarca.png"
 
 class LandingPage extends React.Component {
-    // state = {
-	// 	scroll: "Home",
-	// }
-
-    // goToQuemSomos = 
 
     render() {
         return (
             <div>
-                
-                <Header/>
+                <HeaderFixed>
+                <Header/>   
+                </HeaderFixed>
 
-                <DivIntro>
+                <DivIntro >
                     <div>
                         <Img src={Logo} alt="Logomarca Labeninjas" />
                     </div>
@@ -90,8 +28,8 @@ class LandingPage extends React.Component {
                         </DivTextos>
 
                         <DivBotoes>
-                            <button onClick={this.props.formulario}>QUERO SER UM NINJA</button>
-                            <button onClick={this.props.contratar}>CONTRATE UM NINJA</button>
+                            <Button onClick={this.props.formulario}>QUERO SER UM NINJA  ➜</Button>
+                            <Button onClick={this.props.contratar}>CONTRATE UM NINJA  ➜</Button>
                         </DivBotoes>
                     </DivTB>
                 </DivIntro>
@@ -103,6 +41,7 @@ class LandingPage extends React.Component {
                     </DivCarrossel2>
 
                     <DivTexto2>
+                    <TextoQuemSomos>
                     <h1>O que é o Labeninjas?</h1>
                     <p>É a maior plataforma de contratação de serviços do Brasil. 
                     Uma plataforma que conecta clientes e profissionais, com diversos 
@@ -115,11 +54,18 @@ class LandingPage extends React.Component {
                     ninjas, pois acreditamos que em todo mundo há uma história de sucesso 
                     que podemos ajudar a tornar realidade.
                     </p>
+                    </TextoQuemSomos>
                     </DivTexto2>
 
                 </DivQuemSomos>
 
+                <CardsStyle>
+                <TituloCards>
+                <h1>DEPOIMENTOS</h1>
+                <h4>O QUE DIZEM OS NOSSOS NINJAS:</h4>
+                </TituloCards>
                 <CardDepoimentos/>
+                </CardsStyle>
 
                 <Footer />
             </div>

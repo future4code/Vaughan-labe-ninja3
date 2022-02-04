@@ -2,6 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "../../assets/logo-cabecalho.png"
 
+const Botoes = styled.button`
+    color: white;
+    background: transparent;
+    border-radius: 15px;
+    border: none;
+`
+
 const DivContainer = styled.div`
     background-color: #1B0034;
     display: flex;
@@ -16,23 +23,23 @@ const Img = styled.img`
 
 const DivButoes = styled.div`
     display: flex;
-    gap: 10px;
+    gap: 30px;
 `
 
 class Header extends React.Component {
 
     render() {
         return (
-            <DivContainer>
+            <DivContainer>   
 
                 <div>
                     <Img src={Logo} alt="Logomarca Labeninjas" />
                 </div>
 
                 <DivButoes>
-                    <button>PÁGINA INICIAL</button>
-                    <button>QUEM SOMOS</button>
-                    <button>CONTATO</button>
+                    <a href="#"><Botoes >QUEM SOMOS</Botoes></a>
+                    <a href="#"><Botoes >SERVIÇOS</Botoes></a>
+                    <a href="#"><Botoes >CONTATO</Botoes></a>
                 </DivButoes>
 
             </DivContainer>

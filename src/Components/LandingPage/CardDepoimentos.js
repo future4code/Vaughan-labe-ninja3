@@ -24,7 +24,6 @@ const ImgPessoas = styled.img`
     height: 200px;
     width: 200px;
     border-radius: 100px;
-    margin-right: 20px;
 `
 const ImgAspas = styled.img`
     height: 3rem;
@@ -33,8 +32,8 @@ const ImgAspas = styled.img`
 const StyleCard = styled.div`
   margin: 20px;
   width: 20%;
-  height: 25rem;
-  background-color: #F0F0F0;
+  height: 27rem;
+  background-color: #D1C7DB;
   padding: 20px;
   border-radius: 8px;
   display: flex;
@@ -43,68 +42,89 @@ const StyleCard = styled.div`
   justify-content: center;
   cursor: pointer;
   &:hover {
-    background-color: #D1C7DB;
+    background-color: #BBB0C6;
   }
 `
+const Textos = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
+    gap: 20px;
+`
+
 class Header extends React.Component {
 
     render() {
         return (
             <DivContainer>
-                <h1>DEPOIMENTOS</h1>
-                <h3>O QUE DIZEM OS NOSSOS NINJAS:</h3>
 
                 <DivCards>
-                <StyleCard>
-                    <div>
-                        <ImgPessoas src={Pessoa1} alt="Imagem Pessoa" />
-                    </div>
-                    <div>
-                        <ImgAspas src={Aspas} />
-                        <p>Eu nunca trabalhei em um lugar tão maravilhoso! Sinto que o
-                            meu trabalho importa mesmo, mas além disso sinto que eu importo.</p>
-                        <p>Adriana, Agente de Atendimentos</p>
-                    </div>
-                </StyleCard>
+                    <StyleCard>
+                        <div>
+                            <ImgPessoas src={Pessoa1} alt="Imagem Pessoa" />
+                        </div>
 
-                <StyleCard>
-                    <div>
-                        <ImgPessoas src={Pessoa2} alt="Imagem Pessoa" />
-                    </div>
-                    <div>
-                        <ImgAspas src={Aspas} />
-                        <p>É um ambiente muito leve de trabalhar, onde comunicação entre
-                            os diferentes times é muito frequente. Tenho muito orgulho de
-                            fazer parte dessa empresa.</p>
-                        <p>Roberto, Especialista de Comunicação</p>
-                    </div>
-                </StyleCard>
+                        <div>
+                            <ImgAspas src={Aspas} />
+                            <Textos>
+                                <p>Eu nunca trabalhei em um lugar tão maravilhoso! Sinto que o
+                                    meu trabalho importa mesmo, mas além disso sinto que eu importo.</p>
+                                <p>Adriana, Agente de Atendimentos</p>
+                            </Textos>
+                        </div>
 
-                <StyleCard>
-                    <div>
-                        <ImgPessoas src={Pessoa3} alt="Imagem Pessoa" />
-                    </div>
-                    <div>
-                        <ImgAspas src={Aspas} />
-                        <p>Muito orgulho de trabalhar em um ambiente com tanta valorização a
-                            diversidade onde a inclusão é um valor tão importante.</p>
-                        <p>Magnólia, Agile Master</p>
-                    </div>
-                </StyleCard>
+                    </StyleCard>
 
-                <StyleCard>
-                    <div>
-                        <ImgPessoas src={Pessoa4} alt="Imagem Pessoa" />
-                    </div>
-                    <div>
-                        <ImgAspas src={Aspas} />
-                        <p>A chance de aprender cada vez mais o que faço é incrível, 
-                        o apoio que tenho é maravilhoso. Esse apoio que representa que 
-                        quero continuar aqui.</p>
-                        <p>Júlio César, Agente de Atendimentos</p>
-                    </div>
-                </StyleCard>
-                
+                    <StyleCard>
+                        <div>
+                            <ImgPessoas src={Pessoa2} alt="Imagem Pessoa" />
+                        </div>
+
+                        <div>
+                            <ImgAspas src={Aspas} />
+                            <Textos>
+                                <p>É um ambiente muito leve de trabalhar, onde comunicação entre
+                                    os diferentes times é muito frequente. Tenho muito orgulho de
+                                    fazer parte dessa empresa.</p>
+                                <p>Roberto, Especialista de Comunicação</p>
+                            </Textos>
+                        </div>
+
+                    </StyleCard>
+
+                    <StyleCard>
+                        <div>
+                            <ImgPessoas src={Pessoa3} alt="Imagem Pessoa" />
+                        </div>
+
+                        <div>
+                            <ImgAspas src={Aspas} />
+                            <Textos>
+                                <p>Muito orgulho de trabalhar em um ambiente com tanta valorização a
+                                    diversidade onde a inclusão é um valor tão importante.</p>
+                                <p>Magnólia, Agile Master</p>
+                            </Textos>
+                        </div>
+
+                    </StyleCard>
+
+                    <StyleCard>
+                        <div>
+                            <ImgPessoas src={Pessoa4} alt="Imagem Pessoa" />
+                        </div>
+
+                        <div>
+                            <ImgAspas src={Aspas} />
+                            <Textos>
+                                <p>A chance de aprender cada vez mais o que faço é incrível,
+                                    o apoio que tenho é maravilhoso. Esse apoio que representa que
+                                    quero continuar aqui.</p>
+                                <p>Júlio César, Agente de Atendimentos</p>
+                            </Textos>
+                        </div>
+
+                    </StyleCard>
+
                 </DivCards>
 
             </DivContainer>
