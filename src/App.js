@@ -7,7 +7,7 @@ import Global from './AppStyled'
 
 class App extends React.Component {
 	state = {
-		page: "Home",
+		page: "Carrinho",
 		cart: [],
 		priceAll: 0
 	}
@@ -73,7 +73,7 @@ class App extends React.Component {
 			case "Cadastro":
 				return <Formulario Home={this.goToHome}/>
 			case "Carrinho":	
-				return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} 
+				return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} Home={this.goToHome}
 				deleteCards={this.deleteCards} voltar={this.goToContratacao} service={this.serviceContrated}/>
 			default:
 				return "Home"
