@@ -65,6 +65,11 @@ const DivCarrossel2 = styled.div`
 `
 
 class LandingPage extends React.Component {
+    // state = {
+	// 	scroll: "Home",
+	// }
+
+    // goToQuemSomos = 
 
     render() {
         return (
@@ -85,7 +90,7 @@ class LandingPage extends React.Component {
                         </DivTextos>
 
                         <DivBotoes>
-                            <button>QUERO SER UM NINJA</button>
+                            <button onClick={this.props.formulario}>QUERO SER UM NINJA</button>
                             <button onClick={this.props.contratar}>CONTRATE UM NINJA</button>
                         </DivBotoes>
                     </DivTB>

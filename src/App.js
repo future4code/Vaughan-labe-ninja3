@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import Formulario from './Pages/Formulario';
 import CardJobs from './Components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/LandingPage'
@@ -61,10 +61,13 @@ class App extends React.Component {
 	goToCarrinho = () => {
 		this.setState({page: "Carrinho"})
 	}
+
 	ChangeScreen = () => {
 		switch (this.state.page) {
 			case "Home":
-				return <LandingPage contratar={this.goToContratacao} />
+				return <LandingPage contratar={this.goToContratacao}  />
+			case "Formulario":
+				return <Formulario/>
 			case "Contratacao":
 				return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho}/>
 			case "Carrinho":	

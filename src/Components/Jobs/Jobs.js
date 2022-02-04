@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerJobs } from "./styles";
+import { ContainerJobs} from "./styles";
 
 
 export default class Jobs extends React.Component{
