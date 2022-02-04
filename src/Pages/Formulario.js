@@ -149,7 +149,7 @@ class Formulario extends React.Component {
                 </div>
 
                 <DivButoes>
-                    <button>PÁGINA INICIAL</button>
+                    <button onClick={this.props.Home}>PÁGINA INICIAL</button>
                 </DivButoes>
 
             </DivHeader>

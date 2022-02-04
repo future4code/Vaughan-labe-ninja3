@@ -55,7 +55,7 @@ class LandingPage extends React.Component {
                         </DivTextos>
 
                         <DivBotoes>
-                            <button>QUERO SER UM NINJA</button>
+                            <button onClick={this.props.cadastrar}>QUERO SER UM NINJA</button>
                             <button onClick={this.props.contratar}>CONTRATE UM NINJA</button>
                         </DivBotoes>
                     </DivTB>
