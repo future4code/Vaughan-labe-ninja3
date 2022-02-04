@@ -13,10 +13,11 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
+
 `
 export const Contratar = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 38vw;
+width: 38vw
 `

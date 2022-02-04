@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContainerRender = styled.div`
 display: grid;
-align-items: baseline;
+align-items: center;
 justify-items: center;
 border: 3px solid black;
 color: white;
@@ -19,6 +19,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 width: 20vw;
+padding: 0 20px;
 `
 export const ButtonCard = styled.button`
 background-color: transparent;
