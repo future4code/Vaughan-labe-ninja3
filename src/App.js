@@ -1,12 +1,12 @@
 import React from 'react'
-import CardJobs from './components/CardJobs/CardJobs';
+import CardJobs from './Components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/LandingPage'
 import Global from './AppStyled'
 
 class App extends React.Component {
 	state = {
-		page: "Home",
+		page: "Carrinho",
 		cart: [],
 		priceAll: 0
 	}
@@ -79,7 +79,6 @@ class App extends React.Component {
 			<>
 			    <Global />
 				{this.ChangeScreen()}
-
 			</>
 		)
 	}

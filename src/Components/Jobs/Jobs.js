@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerJobs } from "./styles";
+import { CartJobs, ContainerJobs } from "./styles";
 
 
 export default class Jobs extends React.Component{
@@ -7,8 +7,13 @@ export default class Jobs extends React.Component{
         return(
             <ContainerJobs>
                 <h4>{this.props.jobName}</h4>
+                    
+                <CartJobs>
+                <div>
                 <p>R$ {this.props.preco},00</p>
+                </div>
                 <button onClick={this.props.onClick}>deletar</button>
+                </CartJobs>
             </ContainerJobs>
         )
     }

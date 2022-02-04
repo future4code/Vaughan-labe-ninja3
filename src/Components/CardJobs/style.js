@@ -24,9 +24,10 @@ export const ButtonCard = styled.button`
 background-color: transparent;
 border: 0;
 cursor: pointer;
+padding: 10px;
 img{
     width: 40px;
-   height: 40px;
+    height: 40px;
    object-fit: cover;
 }
 `
