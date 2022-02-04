@@ -1,6 +1,6 @@
 import React from "react";
-import Jobs from "../../components/Jobs/Jobs";
-import { ContainerCarrinho, ContainerListCart, Contratar } from "./style";
+import Jobs from "../../Components/Jobs/Jobs";
+import { ContainerCarrinho, ContainerListCart, Contratar} from "./style";
 
 export default class Carrinho extends React.Component{
     
@@ -8,7 +8,7 @@ export default class Carrinho extends React.Component{
         const cardRenderizado = this.props.cart.map((prod)=>{
             return(
                 <ContainerListCart key={prod.id}>
-                <Jobs 
+                <Jobs
                 jobName={prod.title}
                 preco={prod.price}
                 onClick={()=> this.props.deleteCards(prod)}
@@ -18,6 +18,7 @@ export default class Carrinho extends React.Component{
         })
         return(
             <ContainerCarrinho>
+              
                 <button onClick={this.props.voltar}>Voltar</button>
                 {cardRenderizado}
                 <Contratar>

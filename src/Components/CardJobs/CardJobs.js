@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { BASE_URL, Header } from "../../Constants/urls";
+import { BASE_URL, header } from "../../Constants/Url";
 import { ButtonCard, ContainerButton, ContainerJobs, ContainerRender } from "./style";
 import AddCartImg from "../../assets/carrinho-de-compras.png"
 
@@ -12,7 +12,7 @@ export default class CardJobs extends React.Component{
         this.getAllJobss()
     }
     getAllJobss = () =>{
-        axios.get(`${BASE_URL}/jobs`,Header )
+        axios.get(`${BASE_URL}/jobs`, header )
         .then((res)=>{
             this.setState({listJobs: res.data.jobs})
         })
