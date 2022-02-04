@@ -1,4 +1,5 @@
 import React from 'react'
+import Formulario from './Pages/Formulario';
 import CardJobs from './components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/LandingPage'
