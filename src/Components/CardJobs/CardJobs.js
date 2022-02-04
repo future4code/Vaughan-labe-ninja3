@@ -25,7 +25,7 @@ export default class CardJobs extends React.Component{
             return(
                 <ContainerRender key={cards.id}>
                   <h3>{cards.title}</h3>
-                  <p> {cards.dueDate} Preço: {cards.price}</p>
+                  <p> {cards.dueDate} Preço: R${cards.price}</p>
                   <ContainerButton>
                   <button>Ver Detalhes</button>
                   <ButtonCard onClick={()=> this.props.onClick(cards)}><img src={AddCartImg}/></ButtonCard> 
