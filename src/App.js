@@ -1,4 +1,6 @@
 import React from 'react'
+import Formulario from './Pages/Formulario';
+import LandingPage from "./Pages/LandingPage"
 
 class App extends React.Component {
 
@@ -6,7 +8,7 @@ class App extends React.Component {
 
 		return (
 			<div>
-
+             <Formulario/>
 			</div>
 		)
 	}
