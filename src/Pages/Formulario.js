@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { BASE_URL, header } from "../constants/Url";
-import Logo from "../components/img/logo-cabecalho.png"
+import { BASE_URL, header } from "../Constants/Url";
+import Logo from "../Components/img/logo-cabecalho.png"
 import axios from "axios";
 
 const DivBackground = styled.div`
@@ -124,9 +124,7 @@ class Formulario extends React.Component {
             dueDate: this.state.prazo
         }
         console.log(body)
-        axios.post(`${BASE_URL}/jobs`, body, {
-            headers: { Authorization: " e2190c39-7930-4db4-870b-bed0e5e4b88e" }
-        })
+        axios.post(`${BASE_URL}/jobs`, body, header)
             .then((response) => {
                 alert("Ninja cadastrado com sucesso!")
                 this.setState({ preco: "", titulo: "", descricao: "", pagamento: "", prazo: "" })
@@ -151,7 +149,7 @@ class Formulario extends React.Component {
                 </div>
 
                 <DivButoes>
-                    <button>PÁGINA INICIAL</button>
+                    <button onClick={this.props.Home}>PÁGINA INICIAL</button>
                 </DivButoes>
 
             </DivHeader>

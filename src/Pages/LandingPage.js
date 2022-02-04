@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import CardDepoimentos from "../components/CardDepoimentos"
-import Logo from "../components/img/Logomarca.png"
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import CardDepoimentos from "../Components/CardDepoimentos"
+import Logo from "../Components/img/Logomarca.png"
 
 const DivIntro = styled.div`
     background-color: #F0F0F0;
@@ -55,7 +55,7 @@ class LandingPage extends React.Component {
                         </DivTextos>
 
                         <DivBotoes>
-                            <button>QUERO SER UM NINJA</button>
+                            <button onClick={this.props.cadastrar}>QUERO SER UM NINJA</button>
                             <button onClick={this.props.contratar}>CONTRATE UM NINJA</button>
                         </DivBotoes>
                     </DivTB>
