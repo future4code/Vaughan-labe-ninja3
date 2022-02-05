@@ -3,9 +3,13 @@ import styled from "styled-components";
 import { BASE_URL, header } from "../Constants/Url";
 import Logo from "../Components/img/logo-cabecalho.png"
 import axios from "axios";
+import Checkbox from '@material-ui/core/Checkbox';
+
+
 
 const DivBackground = styled.div`
     background: #1B0034;
+    height: 100vh;
 `
 
 const DivHeader = styled.div`
@@ -15,7 +19,7 @@ const DivHeader = styled.div`
     align-items: center;
     padding: 20px;
     margin-bottom: 30px;
-    border-left: 1px solid white;
+    border-bottom: 1px solid #F0F0F0;
 `
 const Img = styled.img`
     height: 3rem;
@@ -39,8 +43,6 @@ const Container = styled.div`
   justify-content: center;
   color: #1B0034 ;
   
-  /* &:hover {
-    background-color: #D1C7DB; */
 `
 
 const ContainerAlinhar = styled.div`
@@ -54,30 +56,42 @@ const ContainerAlinhar = styled.div`
 const Bloco = styled.div`
  display: flex;
  flex-direction: column;
+ gap: 20px;
+ padding: 45px;
+ align-items: center
+`
+const Input = styled.input`
+ width: 400px;
+ border-radius:10px ;
+ border: 0;
+ height: 26px;
+ padding: 15px;
+ font-size: inherit;
+`
+const Select = styled.select`
+ width: 400px;
+ border-radius:10px;
+ border: 0px;
+ height: 26px;
+ font-size: inherit;
  
- 
 `
-const Input1 =styled.div`
-margin-left: 60px;
-
-
+const ButtonForm = styled.button`
+left: 40px;
+width: 180px;
+background-color: #1B0034;
+color: white;
+font-size: inherit;
+border: none;
+border-radius:20px ;
+height: 30px;
+ &:hover{
+     background-color:black ;
+     color:white;
+     cursor:pointer
+ }
 `
-const Input2 =styled.div`
-margin-left: 60px;
-
-`
-const Input3 =styled.div`
-margin-left: 60px;
-
-
-`
-const Input4 =styled.div`
-margin-left: 60px;
-
-
-`
-const Input5 =styled.div`
-margin-left: 60px;
+const Fieldset = styled.fieldset`
 
 
 `
@@ -102,18 +116,19 @@ class Formulario extends React.Component {
         this.setState({ preco: e.target.valueAsNumber });
     };
 
-    inputPagamento = (e) => {
+    /* inputPagamento = (e) => {
         const formaPagamento = [...this.state.pagamento]
         formaPagamento.push(e.target.value)
         this.setState({ pagamento: formaPagamento });
-    };
+    }; */
     inputPrazo = (e) => {
         this.setState({ prazo: e.target.value });
     };
+    inputPagamento =(e)=>{
+        this.setState({pagamento:[...this.state.pagamento, e.target.value]})
+        
+    }
 
-    /* componentDidMount() {
-        this.cadastrarNinja()
-    } */
 
     cadastrarNinja = () => {
         const body = {
@@ -136,75 +151,80 @@ class Formulario extends React.Component {
                 console.log(error.data)
 
             })
-    }
 
+    }
     render() {
         return (
             <DivBackground>
 
-            <DivHeader>
+                <DivHeader>
 
-                <div>
-                    <Img src={Logo} alt="Logomarca Labeninjas" />
-                </div>
+                    <div>
+                        <Img src={Logo} alt="Logomarca Labeninjas" />
+                    </div>
 
-                <DivButoes>
-                    <button onClick={this.props.Home}>PÁGINA INICIAL</button>
-                </DivButoes>
+                    <DivButoes>
+                        <button onClick={this.props.Home}>PÁGINA INICIAL</button>
+                    </DivButoes>
 
-            </DivHeader>
-         
-            <ContainerAlinhar>
-            <Container>
-                <h1>Cadastre o seu serviço</h1>
-                <Bloco>
-                    <Input1>
-                        <input
-                            value={this.state.titulo}
-                            placeholder="Título*"
-                            onChange={this.inputTitulo}
-                        />
-                    </Input1>
-                    <Input2>
-                        <input
-                            value={this.state.descricao}
-                            placeholder="Descrição*"
-                            onChange={this.inputDescricao}
-                        />
-                    </Input2>
-                    <input type="number"
-                        value={this.state.preco}
-                        placeholder="Preço*"
-                        onChange={this.inputPreco}
-                    />
-                    <Input3>
-                        <select value={this.state.pagamento}
-                            onChange={this.inputPagamento}>
-                            <option value="" disabled selected>Formas de pagamento*</option>
-                            <option value="texto1">Cartão de crédito</option>
-                            <option value="texto2">Cartão de Débito</option>
-                            <option value="texto3">Pix</option>
-                            <option value="texto4">PayPal</option>
-                            <option value="texto5">Boleto</option>
-                        </select>
-                    </Input3>
-                    <Input4>
-                        <input type="date"
-                            value={this.state.prazo}
-                            placeholder="dd/mm/aaaa"
-                            onChange={this.inputPrazo}>
-                        </input>
-                    </Input4>
-                    <Input5>
-                        <button onClick={this.cadastrarNinja}> Cadastrar </button>
-                    </Input5>
-                </Bloco>
-            </Container>
-            </ContainerAlinhar>
+                </DivHeader>
+
+                <ContainerAlinhar>
+                    <Container>
+                        <h1>Cadastre o seu serviço</h1>
+                        <Bloco>
+                            <div>
+                                <Input
+                                    type="text"
+                                    value={this.state.titulo}
+                                    placeholder="Título*"
+                                    onChange={this.inputTitulo}
+                                />
+                            </div>
+                            <div>
+
+                                <Input
+                                    value={this.state.descricao}
+                                    placeholder="Descrição*"
+                                    onChange={this.inputDescricao}
+                                />
+                            </div>
+                            <div>
+                                <Input type="number"
+                                    value={this.state.preco}
+                                    placeholder="Preço*"
+                                    onChange={this.inputPreco}
+                                />
+                            </div>
+                            <div>
+                               
+                                <Fieldset value={this.state.pagamento} onChange={this.inputPagamento} placeholder="Formas de Pagamento" >
+                                    <div><label> <label> Formas de Pagamento</label></label></div>
+                                    <div><input type="checkbox" id="debito" value="debito" ></input><label> Cartão de Débito</label></div>
+                                    <div><input type="checkbox" id="credito" value="credito" ></input><label> Cartão de Crédito</label></div>
+                                    <div><input type="checkbox" id="paypal" value="paypal" ></input><label> PayPal</label></div>
+                                    <div><input type="checkbox" id="boleto" value="boleto" ></input><label> Boleto</label></div>
+                                    <div> <input type="checkbox" id="pix" value="pix" ></input><label> Pix</label></div>
+                                </Fieldset>
+
+                            </div>
+                            <div>
+                                <Input type="date"
+                                    value={this.state.prazo}
+                                    placeholder="dd/mm/aaaa"
+                                    onChange={this.inputPrazo}>
+                                </Input>
+                            </div>
+                            <div>
+                                <ButtonForm onClick={this.cadastrarNinja}> Cadastrar </ButtonForm>
+                            </div>
+                        </Bloco>
+                    </Container>
+                </ContainerAlinhar>
 
             </DivBackground>
-            
-        )  
+
+        )
     }
 }
 export default Formulario;
