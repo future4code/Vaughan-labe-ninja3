@@ -4,17 +4,21 @@ import CardJobs from './Components/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/Home/LandingPage'
 import Global from './AppStyled'
+import PaginaDetalhes from './Pages/PaginaDetalhes';
+
 
 class App extends React.Component {
 	state = {
 		page: "Home",
 		cart: [],
-		priceAll: 0
+		priceAll: 0,
+		
 	}
 
-	componentDidMount () {
-		this.seizeJobs()
-	}
+	// componentDidMount () {
+	// 	this.seizeJobs()
+	// }
+
 	addInCart = (cards) =>{
 		if(cards.quantidade !== 1){
 		cards.quantidade = 1
@@ -58,21 +62,29 @@ class App extends React.Component {
 	goToContratacao = () => {
 		this.setState({page: "Contratacao"})
 	}
+	goToCadastro = () => {
+		this.setState({page: "Cadastro"})
+	}
 	goToCarrinho = () => {
 		this.setState({page: "Carrinho"})
 	}
-
+	goToDetails = (id) => {
+		this.setState({page: "Detalhes", selecionarId: id})
+	}
+	
 	ChangeScreen = () => {
 		switch (this.state.page) {
 			case "Home":
-				return <LandingPage contratar={this.goToContratacao}  />
-			case "Formulario":
-				return <Formulario/>
+				return <LandingPage contratar={this.goToContratacao} cadastrar={this.goToCadastro}/>
 			case "Contratacao":
-				return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho}/>
+				return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho} goToDetails={this.goToDetails}/>
+			case "Cadastro":
+				return <Formulario Home={this.goToHome}/>
 			case "Carrinho":	
-				return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} 
+				return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} Home={this.goToHome}
 				deleteCards={this.deleteCards} voltar={this.goToContratacao} service={this.serviceContrated}/>
+			case "Detalhes":
+				return <PaginaDetalhes id={this.state.selecionarId} contratar= {this.goToContratacao} Home={this.goToHome}/>
 			default:
 				return "Home"
 		}

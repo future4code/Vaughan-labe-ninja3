@@ -7,6 +7,12 @@ const Botoes = styled.button`
     background: transparent;
     border-radius: 15px;
     border: none;
+    width: 120px;
+    height: 30px;
+&:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.25);
+}
 `
 
 const DivContainer = styled.div`
@@ -23,23 +29,23 @@ const Img = styled.img`
 
 const DivButoes = styled.div`
     display: flex;
-    gap: 30px;
+    gap: 10px;
 `
 
 class Header extends React.Component {
 
-    render() {
+    render(props) {
         return (
-            <DivContainer>   
+            <DivContainer>
 
                 <div>
                     <Img src={Logo} alt="Logomarca Labeninjas" />
                 </div>
 
                 <DivButoes>
-                    <a href="#"><Botoes >QUEM SOMOS</Botoes></a>
-                    <a href="#"><Botoes >SERVIÇOS</Botoes></a>
-                    <a href="#"><Botoes >CONTATO</Botoes></a>
+                    <a href="#quem-somos"><Botoes >QUEM SOMOS</Botoes></a>
+                    <a href="#servicos"><Botoes >SERVIÇOS</Botoes></a>
+                    <a href="#contato"><Botoes >CONTATO</Botoes></a>
                 </DivButoes>
 
             </DivContainer>

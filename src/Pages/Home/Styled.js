@@ -96,3 +96,4 @@ export const HeaderFixed = styled.div`
     left: 0;
     width: 100%;
 `
+

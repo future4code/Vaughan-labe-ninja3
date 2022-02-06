@@ -28,7 +28,7 @@ class LandingPage extends React.Component {
                         </DivTextos>
 
                         <DivBotoes>
-                            <Button onClick={this.props.formulario}>QUERO SER UM NINJA  ➜</Button>
+                            <Button onClick={this.props.cadastrar}>QUERO SER UM NINJA  ➜</Button>
                             <Button onClick={this.props.contratar}>CONTRATE UM NINJA  ➜</Button>
                         </DivBotoes>
                     </DivTB>
