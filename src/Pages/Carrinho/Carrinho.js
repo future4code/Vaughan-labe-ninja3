@@ -34,11 +34,13 @@ export default class Carrinho extends React.Component {
 
                 </DivContainer>
                 <ContainerCarrinho>
-                    {cardRenderizado}
+                    {this.props.cart.length <= 0? <div>Carrinho está vazio</div> : 
+                    <> {cardRenderizado}
                     <Contratar>
                         <PStyle>TOTAL: R$ {this.props.priceAll},00</PStyle>
                         <ButtonContrat onClick={this.props.service}>CONTRATAR SERVIÇOS</ButtonContrat>
                     </Contratar>
+                    </>}
                 </ContainerCarrinho>
             </>
         )

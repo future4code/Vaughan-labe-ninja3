@@ -48,7 +48,7 @@ width: 38vw;
 `
 export const PStyle = styled.p`
 color: #1B0034;
-font-size: 25px
+font-size: 25px;
 `
 export const ButtonContrat = styled.button`
 color: #FFFFFF;
@@ -62,4 +62,20 @@ font-size: 15px;
 &:hover{
     background-color: black;
 }
+`
+export const DivContainer = styled.div`
+    background-color: #1B0034;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+`
+export const Img = styled.img`
+    height: 3rem;
+`
+
+export const DivButoes = styled.div`
+    display: flex;
+    gap: 10px;
 `

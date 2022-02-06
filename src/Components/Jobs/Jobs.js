@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonJobs, CartJobs, ContainerJobs, ServiceName } from "./styles";
+import { ButtonJobs, CartJobs, ContainerJobs } from "./styles";
 import lixeira from "../../assets/trash.png"
 
 export default class Jobs extends React.Component{
