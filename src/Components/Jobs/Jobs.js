@@ -1,6 +1,5 @@
 import React from "react";
-import { CartJobs, ContainerJobs } from "./styles";
-
+import { CartJobs, ContainerJobs} from "./styles";
 
 export default class Jobs extends React.Component{
     render(){

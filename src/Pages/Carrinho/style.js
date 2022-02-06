@@ -19,5 +19,21 @@ export const Contratar = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 38vw
+width: 38vw;
+`
+export const DivContainer = styled.div`
+    background-color: #1B0034;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+`
+export const Img = styled.img`
+    height: 3rem;
+`
+
+export const DivButoes = styled.div`
+    display: flex;
+    gap: 10px;
 `

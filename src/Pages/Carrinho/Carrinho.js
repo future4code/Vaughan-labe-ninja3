@@ -1,7 +1,7 @@
 import React from "react";
 import Jobs from "../../Components/Jobs/Jobs";
-import { ContainerCarrinho, ContainerListCart, Contratar} from "./style";
-
+import { ContainerCarrinho, ContainerListCart, Contratar, DivContainer, DivButoes, Img} from "./style";
+import Logo from "../../assets/logo-cabecalho.png"
 export default class Carrinho extends React.Component{
     
     render(){
@@ -16,16 +16,31 @@ export default class Carrinho extends React.Component{
                 </ContainerListCart>
             )
         })
-        return(
-            <ContainerCarrinho>
-              
-                <button onClick={this.props.voltar}>Voltar</button>
-                {cardRenderizado}
-                <Contratar>
-                <p>Total R$ {this.props.priceAll},00</p>
-                <button onClick={this.props.service}>Contratar serviços</button>
-                </Contratar>
-            </ContainerCarrinho>
+        return (
+            <>
+                <DivContainer>
+
+                    <div>
+                        <Img src={Logo} alt="Logomarca Labeninjas" />
+                    </div>
+
+                    <DivButoes>
+                        <button onClick={this.props.Home}>PÁGINA INICIAL</button>
+                        {/* <button onClick={this.props.voltar}><img src={AddCartImg}/></button> */}
+                    </DivButoes>
+                    
+
+                </DivContainer>
+                <ContainerCarrinho>
+                    {this.props.cart.length <= 0? <div>Carrinho está vazio</div> : 
+                    <> {cardRenderizado}
+                    <Contratar>
+                        <h1>TOTAL: R$ {this.props.priceAll},00</h1>
+                        <button onClick={this.props.service}>CONTRATAR SERVIÇOS</button>
+                    </Contratar>
+                    </>}
+                </ContainerCarrinho>
+            </>
         )
     }
 
