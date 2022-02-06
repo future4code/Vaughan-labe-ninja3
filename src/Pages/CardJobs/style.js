@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import TextField from "@material-ui/core/TextField"
+import { Select } from "@material-ui/core";
 
 export const ContainerRender = styled.div`
 display: grid;
@@ -34,8 +35,9 @@ img{
 `
 export const ContainerJobs = styled.div`
 display: grid;
+justify-content: center;
 grid-template-columns: repeat(4, 22vw);
-margin: 10px;
+margin: 15px;
 `
 export const DivContainer = styled.div`
     background-color: #1B0034;
@@ -51,4 +53,60 @@ export const Img = styled.img`
 export const DivButoes = styled.div`
     display: flex;
     gap: 10px;
+`
+
+export const PosicaoSelect = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    gap: 20px;
+`
+
+export const PosicaoInput = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    gap: 20px;
+`
+
+export const Geral = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-itens: center;
+    justify-content: center;
+    gap: 60px;
+`
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+`
+export const BuscaContainer = styled.div`
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-right: 160px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255, 0.15);
+    margin-left: 0;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    &:hover {
+        background-color: rgba(255,255,255, 0.25);
+    };
+`
+export const InputPreco = styled(TextField)`
+    width: 200px;
+    margin-right: 32px !important;
+`
+export const StyleSelect = styled.select`
+    width: 200px;
+    margin: 0 32px 8px 0;
+    height: 40px;
+    border-radius: 5px;
+    border-color: #CBC8C8;
 `

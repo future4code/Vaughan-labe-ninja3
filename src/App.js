@@ -1,5 +1,5 @@
 import React from 'react'
-import Formulario from './Pages/Formulario';
+import Formulario from './Pages/Formulario/Formulario';
 import CardJobs from './Pages/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/LandingPage'
@@ -71,7 +71,7 @@ class App extends React.Component {
 				case "Home":
 					return <LandingPage contratar={this.goToContratacao} cadastrar={this.goToCadastro} />
 				case "Contratacao":
-					return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho} />
+					return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho} Home={this.goToHome}/>
 				case "Cadastro":
 					return <Formulario Home={this.goToHome} />
 				case "Carrinho":
