@@ -63,19 +63,3 @@ font-size: 15px;
     background-color: black;
 }
 `
-export const DivContainer = styled.div`
-    background-color: #1B0034;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 30px;
-`
-export const Img = styled.img`
-    height: 3rem;
-`
-
-export const DivButoes = styled.div`
-    display: flex;
-    gap: 10px;
-`
