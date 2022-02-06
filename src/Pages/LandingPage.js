@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import CardDepoimentos from "../Components/CardDepoimentos"
-import Logo from "../Components/img/Logomarca.png"
+import Logo from "../assets/Logomarca.png"
 
 const DivIntro = styled.div`
     background-color: #F0F0F0;

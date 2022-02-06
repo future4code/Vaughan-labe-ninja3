@@ -3,13 +3,10 @@ import React from "react";
 import {newDate} from "./Data"
 import { BASE_URL, header } from "../../Constants/Url";
 import { ButtonCard, ContainerButton, ContainerJobs, BuscaContainer, InputPreco, ContainerRender, DivContainer, Img, DivButoes, PosicaoSelect, PosicaoInput, Geral, Container, StyleSelect} from "./style";
-import Logo from "../../Components/img/logo-cabecalho.png"
+import Logo from "../../assets/logo-cabecalho.png"
 import AddCartImg from "../../assets/carrinho-de-compras.png"
-import Carrinho from "../Carrinho/Carrinho"
-import { ContainerListCart } from "../Carrinho/style";
 import InputBase from '@material-ui/core/InputBase'
 import { InputAdornment } from "@material-ui/core";
-import InputLabel from "@material-ui/core/InputLabel"
 
 
 export default class CardJobs extends React.Component {
