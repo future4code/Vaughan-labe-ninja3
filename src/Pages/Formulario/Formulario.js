@@ -1,7 +1,7 @@
 import React from "react"
-import { DivBackground, DivHeader, Img, DivButoes, Container, CheckboxStyle, FormContainer, ButtonForm, DivContainer } from "./FormStyle"
+import { DivBackground, DivHeader, Img, DivButoes, BotaoHome, Container, CheckboxStyle, FormContainer, ButtonForm, DivContainer } from "./FormStyle"
 import { BASE_URL, header } from "../../Constants/Url";
-import Logo from "../../Components/img/logo-cabecalho.png"
+import Logo from "../../assets/logo-cabecalho.png"
 import axios from "axios"
 import { Checkbox } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
@@ -9,8 +9,8 @@ import { FormGroup } from "@material-ui/core";
 import { FormControlLabel } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField'
 import InputAdornment from "@material-ui/core/InputAdornment"
-import { InputLabel } from "@material-ui/core";
-
+import { ThemeProvider } from '@material-ui/core/styles';
+import { Theme } from '../../Components/Outros/Theme';
 
 class Formulario extends React.Component {
     state = {
@@ -106,115 +106,118 @@ class Formulario extends React.Component {
                 this.setState({ preco: "", titulo: "", descricao: "", prazo: "", credito: false, debito: false, boleto: false, paypal: false, pix: false })
             })
             .catch((error) => {
-                alert(`Erro ao cadastrar Ninja, tente novamente! 
+                alert(`Erro ao cadastrThemenja, tente novamente! 
 ${error.response.data.message}`)
             })
     }
+    
     render() {
         return (
+
             <DivBackground>
+                <ThemeProvider theme={Theme}>
+                    <DivHeader>
+                        <div>
+                            <Img src={Logo} alt="Logomarca Labeninjas" />
+                        </div>
 
-                <DivHeader>
-                    <div>
-                        <Img src={Logo} alt="Logomarca Labeninjas" />
-                    </div>
+                        <DivButoes>
+                            <BotaoHome onClick={this.props.Home}>PÁGINA INICIAL</BotaoHome>
+                        </DivButoes>
+                    </DivHeader>
 
-                    <DivButoes>
-                        <button onClick={this.props.Home}>PÁGINA INICIAL</button>
-                    </DivButoes>
-                </DivHeader>
+                    <DivContainer>
+                        <Container>
+                            <h2>CADASTRE SEU SERVIÇO</h2>
 
-                <DivContainer>
-                    <Container>
-                        <h1>Cadastre seu serviço</h1>
+                            <FormContainer>
+                                <TextField
+                                    value={this.state.titulo}
+                                    onChange={this.inputTitulo}
+                                    required
+                                    label="Título"
+                                    variant="outlined"
+                                    size="small"
+                                    margin="normal"
+                                />
+                                <TextField
+                                    value={this.state.descricao}
+                                    onChange={this.inputDescricao}
+                                    required
+                                    label="Descrição"
+                                    variant="outlined"
+                                    size="small"
+                                    margin="normal"
+                                />
+                                <TextField
+                                    value={this.state.preco}
+                                    onChange={this.inputPreco}
+                                    required
+                                    label="Preço"
+                                    variant="outlined"
+                                    size="small"
+                                    margin="normal"
+                                    type="number"
+                                    InputProps={{
+                                        startAdornment: <InputAdornment position="start">R$</InputAdornment>,
+                                    }}
+                                />
 
-                        <FormContainer>
-                            <TextField
-                                value={this.state.titulo}
-                                onChange={this.inputTitulo}
-                                required
-                                label="Título"
-                                variant="outlined"
-                                size="small"
-                                margin="normal"
-                            />
-                            <TextField
-                                value={this.state.descricao}
-                                onChange={this.inputDescricao}
-                                required
-                                label="Descrição"
-                                variant="outlined"
-                                size="small"
-                                margin="normal"
-                            />
-                            <TextField
-                                value={this.state.preco}
-                                onChange={this.inputPreco}
-                                required
-                                label="Preço"
-                                variant="outlined"
-                                size="small"
-                                margin="normal"
-                                type="number"
-                                InputProps={{
-                                    startAdornment: <InputAdornment position="start">R$</InputAdornment>,
-                                }}
-                            />
+                                <CheckboxStyle>
+                                    <Typography>Formas de Pagamento</Typography>
+                                    <FormGroup color="primary">
+                                        <FormControlLabel
+                                            control={<Checkbox defaultChecked />}
+                                            onChange={this.inputCredito}
+                                            checked={this.state.credito}
+                                            label="Cartão de Crédito" />
+                                        <FormControlLabel
+                                            control={<Checkbox defaultChecked />}
+                                            onChange={this.inputDebito}
+                                            checked={this.state.debito}
+                                            label="Cartão de Débito" />
+                                        <FormControlLabel
+                                            control={<Checkbox defaultChecked />}
+                                            onChange={this.inputBoleto}
+                                            checked={this.state.boleto}
+                                            label="Boleto" />
+                                        <FormControlLabel
+                                            control={<Checkbox defaultChecked />}
+                                            onChange={this.inputPaypal}
+                                            checked={this.state.paypal}
+                                            label="Paypal" />
+                                        <FormControlLabel
+                                            control={<Checkbox defaultChecked />}
+                                            onChange={this.inputPix}
+                                            checked={this.state.pix}
+                                            label="Pix" />
+                                    </FormGroup>
+                                </CheckboxStyle>
 
-                            <CheckboxStyle>
-                                <Typography>Formas de Pagamento</Typography>
-                                <FormGroup color ="secondary">
-                                    <FormControlLabel
-                                        control={<Checkbox defaultChecked />}
-                                        onChange={this.inputCredito}
-                                        checked={this.state.credito}
-                                        label="Cartão de Crédito" />
-                                    <FormControlLabel
-                                        control={<Checkbox defaultChecked />}
-                                        onChange={this.inputDebito}
-                                        checked={this.state.debito}
-                                        label="Cartão de Débito" />
-                                    <FormControlLabel
-                                        control={<Checkbox defaultChecked />}
-                                        onChange={this.inputBoleto}
-                                        checked={this.state.boleto}
-                                        label="Boleto" />
-                                    <FormControlLabel
-                                        control={<Checkbox defaultChecked />}
-                                        onChange={this.inputPaypal}
-                                        checked={this.state.paypal}
-                                        label="Paypal" />
-                                    <FormControlLabel
-                                        control={<Checkbox defaultChecked />}
-                                        onChange={this.inputPix}
-                                        checked={this.state.pix}
-                                        label="Pix" />
-                                </FormGroup>
-                            </CheckboxStyle>
+                                <TextField
+                                    value={this.state.prazo}
+                                    onChange={this.inputPrazo}
+                                    required
+                                    label="Prazo"
+                                    variant="outlined"
+                                    size="small"
+                                    margin="normal"
+                                    type="date"
 
-                            <TextField
-                                value={this.state.prazo}
-                                onChange={this.inputPrazo}
-                                required
-                                label="Prazo"
-                                variant="outlined"
-                                size="small"
-                                margin="normal"
-                                type="date"
+                                    InputLabelProps={{ shrink: true }}
+                                />
 
-                                InputLabelProps={{ shrink: true }}
-                            />
-
-                        </FormContainer>
+                            </FormContainer>
 
                             <div>
                                 <ButtonForm onClick={this.cadastrarNinja}> Cadastrar </ButtonForm>
                             </div>
 
-                    </Container>
-                </DivContainer>
-
+                        </Container>
+                    </DivContainer>
+                </ThemeProvider>
             </DivBackground>
+
         )
     }
 }

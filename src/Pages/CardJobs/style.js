@@ -33,11 +33,23 @@ img{
    object-fit: cover;
 }
 `
+export const ButtonCard2 = styled.button`
+background-color: transparent;
+border: 0;
+cursor: pointer;
+padding: 10px;
+img{
+    width: 35px;
+    height: 25px;
+    object-fit: cover;
+}
+`
 export const ContainerJobs = styled.div`
 display: grid;
 justify-content: center;
 grid-template-columns: repeat(4, 22vw);
 margin: 15px;
+font-size: 15px;
 `
 export const DivContainer = styled.div`
     background-color: #1B0034;
@@ -53,6 +65,8 @@ export const Img = styled.img`
 export const DivButoes = styled.div`
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center
 `
 
 export const PosicaoSelect = styled.div`
@@ -109,4 +123,16 @@ export const StyleSelect = styled.select`
     height: 40px;
     border-radius: 5px;
     border-color: #CBC8C8;
+`
+export const BotaoHome = styled.button`
+    color: #F8E59B;
+    background: transparent;
+    border-radius: 15px;
+    border: none;
+    width: 120px;
+    height: 30px;
+&:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.25);
+}
 `

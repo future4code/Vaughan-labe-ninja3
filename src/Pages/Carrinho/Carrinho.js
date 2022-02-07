@@ -1,6 +1,6 @@
 import React from "react";
 import Jobs from "../../Components/Jobs/Jobs";
-import { ContainerCarrinho, ContainerListCart, Contratar, DivContainer, Img, DivButoes, ButtonService,ButtonContrat, PStyle } from "./style";
+import { ContainerCarrinho, ContainerListCart, Contratar, DivContainer, Img, DivButoes, ButtonService2, ButtonService,ButtonContrat, PStyle } from "./style";
 import Logo from "../../assets/logo-cabecalho.png"
 import AddCartImg from "../../assets/carrinho-de-compras.png"
 
@@ -15,6 +15,7 @@ export default class Carrinho extends React.Component {
                         preco={prod.price}
                         onClick={() => this.props.deleteCards(prod)}
                     />
+
                 </ContainerListCart>
             )
         })
@@ -27,7 +28,7 @@ export default class Carrinho extends React.Component {
                     </div>
 
                     <DivButoes>
-                        <ButtonService onClick={this.props.Home}>PÁGINA INICIAL</ButtonService>
+                        <ButtonService2 onClick={this.props.Home}>PÁGINA INICIAL</ButtonService2>
                         <ButtonService onClick={this.props.voltar}><img src={AddCartImg}/></ButtonService>
                     </DivButoes>
                     

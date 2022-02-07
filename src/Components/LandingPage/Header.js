@@ -1,6 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo-cabecalho.png"
+import Logo from "../../assets/logo-cabecalho.png"
+
+const Botoes = styled.button`
+    color: white;
+    background: transparent;
+    border-radius: 15px;
+    border: none;
+    width: 120px;
+    height: 30px;
+&:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.25);
+}
+`
 
 const DivContainer = styled.div`
     background-color: #1B0034;
@@ -21,20 +34,18 @@ const DivButoes = styled.div`
 
 class Header extends React.Component {
 
-    render() {
+    render(props) {
         return (
             <DivContainer>
-
                 <div>
                     <Img src={Logo} alt="Logomarca Labeninjas" />
                 </div>
 
                 <DivButoes>
-                    <button>PÁGINA INICIAL</button>
-                    <button>QUEM SOMOS</button>
-                    <button>CONTATO</button>
+                    <a href="#quem-somos"><Botoes >QUEM SOMOS</Botoes></a>
+                    <a href="#servicos"><Botoes >SERVIÇOS</Botoes></a>
+                    <a href="#contato"><Botoes >CONTATO</Botoes></a>
                 </DivButoes>
-
             </DivContainer>
         )
     }
