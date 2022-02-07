@@ -50,6 +50,7 @@ const Textos = styled.div`
     flex-direction: column;
     align-itens: center;
     gap: 20px;
+    font-size: 14px;
 `
 
 class Header extends React.Component {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export const DivIntro = styled.div`
     background-color: #F0F0F0;
@@ -93,7 +94,47 @@ export const Button = styled.button`
 export const HeaderFixed = styled.div`
     position: fixed;
     top: 0;
-    left: 0;
+    z-index: 99;  
     width: 100%;
 `
+export const Botoes = styled(AnchorLink)`
+  color: white;
+  text-decoration: none;
+  font-size: 13.5px;
+  background: transparent;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+&:hover {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  color: #F8E59B;
+}
+`
+export const DivContainer = styled.div`
+    background-color: #1B0034;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+`
+export const Img2 = styled.img`
+    height: 3rem;
+`
 
+export const DivButoon = styled.div`
+    display: flex;
+    gap: 20px;
+`
+
+export const H1 = styled.div`
+    color: #756684;
+    font-size: 30px;
+    font-weight: bold;
+`
+export const H4 = styled.div`
+    color: #1B0034;
+    font-weight: bold;
+`

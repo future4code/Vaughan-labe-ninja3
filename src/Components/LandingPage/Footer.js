@@ -38,11 +38,13 @@ const DivOutros = styled.div`
 `
 const DivTextoOutros = styled.div`
     display: flex;
+    font-size: 14px;
     gap: 40px;
     align-items: center;
     justify-content: space-evenly;
 `
 const Divtexto = styled.div`
+    font-size: 13.5px;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -60,6 +62,8 @@ const Lista = styled.li`
     align-items: end;
     display: grid;
     grid-template-columns: 200px 200px;
+    font-size: 13.5px;
+    gap: 8px;
 `
 
 const Separar = styled.div`
@@ -76,7 +80,7 @@ class Footer extends React.Component {
                 <DivContato>
 
                     <Separar>
-                        <h4>SERVIÇOS</h4>
+                        <h5>SERVIÇOS</h5>
                         <Lista>
                             <li>Assistência Técnica</li>
                             <li>Saúde</li>
@@ -92,7 +96,7 @@ class Footer extends React.Component {
                     </Separar>
 
                     <Separar>
-                        <h4>REDES SOCIAIS</h4>
+                        <h5>REDES SOCIAIS</h5>
                         <DivRedesSociais>
                             <a target="_blank" href="https://pt-br.facebook.com/"><Img src={Face} alt="Ícone Facebook" /></a>
                             <a target="_blank" href="https://www.instagram.com/"><Img src={Insta} alt="Ícone Instagram" /></a>
@@ -101,7 +105,7 @@ class Footer extends React.Component {
                     </Separar>
 
                     <Separar>
-                        <h4>DOWNLOADS</h4>
+                        <h5>DOWNLOADS</h5>
                         <DivImgDownload>
                             <a target="_blank" href="https://play.google.com/store?hl=pt_BR&gl=US"><Img src={Baixar1} alt="Ícone Play Store" /></a>
                             <a target="_blank" href="https://www.apple.com/br/store"><Img src={Baixar2} alt="Ícone Apple Store" /></a>

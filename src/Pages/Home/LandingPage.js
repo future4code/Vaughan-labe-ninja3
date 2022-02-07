@@ -1,40 +1,55 @@
 import React from "react"
-import { DivIntro, TextoQuemSomos, DivTextos, DivBotoes, DivTB, Img, DivQuemSomos, DivTexto2, DivCarrossel2, CardsStyle, TituloCards, Button, HeaderFixed} from "./Styled";
+import { DivIntro, TextoQuemSomos, DivTextos, DivBotoes, H1, H4, DivTB, Img, DivQuemSomos, DivTexto2, DivCarrossel2, CardsStyle, TituloCards, Button, HeaderFixed, Botoes, DivContainer, Img2, DivButoon} from "./Styled";
 import Header from "../../Components/LandingPage/Header"
 import Footer from "../../Components/LandingPage/Footer"
 import CardDepoimentos from "../../Components/LandingPage/CardDepoimentos"
 import Carrossel from "../../Components/LandingPage/Carrossel"
-import Logo from "../../assets/Logomarca.png"
+import Logomarca from "../../assets/Logomarca.png"
+import Logo from "../../assets/logo-cabecalho.png"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
+
 
 class LandingPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="servicos">
                 <HeaderFixed>
-                <Header/>   
+                <DivContainer>
+                <div>
+                    <Img2 src={Logo} alt="Logomarca Labeninjas" />
+                </div>
+
+                <DivButoon >
+                    <Botoes href="#servicos" offset='50'>SERVIÇOS</Botoes>
+                    <Botoes href="#quem-somos" >QUEM SOMOS</Botoes>
+                    <Botoes href="#contato" >CONTATO</Botoes>
+                </DivButoon>
+            </DivContainer> 
                 </HeaderFixed>
 
                 <DivIntro >
-                    <div>
-                        <Img src={Logo} alt="Logomarca Labeninjas" />
+                    <div >
+                        <Img src={Logomarca} alt="Logomarca Labeninjas" />
                     </div>
-                    <DivTB>
-                        <DivTextos>
-                            <h1>Conectando quem precisa com quem sabe fazer</h1>
+                    <DivTB >
+                        <DivTextos >
+                            <h1 >Conectando quem precisa com quem sabe fazer</h1>
                             <p>A Labeninjas nasceu com o propósito de conectar quem precisa com quem sabe fazer.
                                 Somos uma plataforma que conecta clientes e profissionais, com diversos tipos de
                                 serviços disponíveis.</p>
                         </DivTextos>
 
-                        <DivBotoes>
+                        <DivBotoes >
                             <Button onClick={this.props.cadastrar}>QUERO SER UM NINJA  ➜</Button>
                             <Button onClick={this.props.contratar}>CONTRATE UM NINJA  ➜</Button>
                         </DivBotoes>
                     </DivTB>
-                </DivIntro>
+                </DivIntro >
 
-                <DivQuemSomos>
+<div id="quem-somos">
+                <DivQuemSomos >
 
                     <DivCarrossel2>
                     <Carrossel/>
@@ -42,7 +57,7 @@ class LandingPage extends React.Component {
 
                     <DivTexto2>
                     <TextoQuemSomos>
-                    <h1>O que é o Labeninjas?</h1>
+                    <h1 >O que é o Labeninjas?</h1>
                     <p>É a maior plataforma de contratação de serviços do Brasil. 
                     Uma plataforma que conecta clientes e profissionais, com diversos 
                     tipos de serviços disponíveis. Nascemos em 2005, com o propósito de 
@@ -58,16 +73,18 @@ class LandingPage extends React.Component {
                     </DivTexto2>
 
                 </DivQuemSomos>
-
-                <CardsStyle>
+                </div>
+                <CardsStyle >
                 <TituloCards>
-                <h1>DEPOIMENTOS</h1>
-                <h4>O QUE DIZEM OS NOSSOS NINJAS:</h4>
+                <H1>DEPOIMENTOS</H1>
+                <H4>O QUE DIZEM OS NOSSOS NINJAS:</H4>
                 </TituloCards>
                 <CardDepoimentos/>
                 </CardsStyle>
 
+                <div id="contato">
                 <Footer />
+                </div>
             </div>
         )
     }

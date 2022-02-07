@@ -1,8 +1,8 @@
 import React from "react"
 import axios from "axios"
 import { BASE_URL, header } from "../Constants/Url"
-import Carregando from "../Components/Carregando"
-import { newDate } from "./Data"
+import Carregando from "../Components/Outros/Carregando"
+import { newDate } from "../Components/Outros/Data"
 
 
 class ServiceDetail extends React.Component {
