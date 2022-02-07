@@ -48,7 +48,7 @@ width: 38vw;
 `
 export const PStyle = styled.p`
 color: #1B0034;
-font-size: 25px
+font-size: 25px;
 `
 export const ButtonContrat = styled.button`
 color: #FFFFFF;
