@@ -15,6 +15,7 @@ export default class Carrinho extends React.Component {
                         preco={prod.price}
                         onClick={() => this.props.deleteCards(prod)}
                     />
+
                 </ContainerListCart>
             )
         })

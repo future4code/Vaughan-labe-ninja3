@@ -4,7 +4,7 @@ import CardJobs from './Pages/CardJobs/CardJobs';
 import Carrinho from './Pages/Carrinho/Carrinho';
 import LandingPage from './Pages/Home/LandingPage'
 import Global from './AppStyled'
-import PaginaDetalhes from './Pages/PaginaDetalhes';
+import PaginaDetalhes from './Pages/Detalhes/PaginaDetalhes';
 
 
 class App extends React.Component {
@@ -26,14 +26,12 @@ class App extends React.Component {
 		} else {
 			const addJobCart = window.confirm(`Quer adicionar ${cards.title} ao carrinho?`)
 			if (addJobCart) {
-				if (cards.quantidade !== 1) {
-					cards.quantidade = 1
+			
 					const newCart = [cards, ...this.state.cart]
 					this.setState({ cart: newCart })
 					localStorage.setItem("jobs", JSON.stringify(newCart))
 					this.valueAll(cards.price)
 					localStorage.setItem("total", this.state.priceAll + cards.price)
-				}
 			}
 		}
 	}
@@ -97,7 +95,8 @@ ChangeScreen = () => {
 			return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} Home={this.goToHome}
 				deleteCards={this.deleteCards} voltar={this.goToContratacao} service={this.serviceContrated} />
 		case "Detalhes":
-			return <PaginaDetalhes id={this.state.detailId} contratar={this.goToContratacao} Home={this.goToHome} />
+			return <PaginaDetalhes id={this.state.detailId} contratar={this.goToContratacao} addCart={this.addInCart}
+			 Home={this.goToHome} goToCarrinho={this.goToCarrinho}/>
 		default:
 			return "Home"
 	}

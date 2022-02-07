@@ -8,6 +8,8 @@ import AddCartImg from "../../assets/carrinho-de-compras.png"
 import Carrinho from "../../assets/car-de-compras2.png"
 import InputBase from '@material-ui/core/InputBase'
 import { InputAdornment } from "@material-ui/core"
+import { ThemeProvider } from '@material-ui/core/styles';
+import {Theme} from  '../../Components/Outros/Theme';
 
 
 export default class CardJobs extends React.Component {
@@ -103,6 +105,7 @@ export default class CardJobs extends React.Component {
 
         return (
             <Container>
+                <ThemeProvider theme={Theme}>
                 <DivContainer>
                     <div>
                         <Img src={Logo} alt="Logomarca Labeninjas" />
@@ -185,7 +188,7 @@ export default class CardJobs extends React.Component {
                 <ContainerJobs>
                     {cardRenderizado}
                 </ContainerJobs>
-
+                </ThemeProvider>
             </Container>
         )
     }

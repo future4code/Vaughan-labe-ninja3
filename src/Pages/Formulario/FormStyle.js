@@ -13,6 +13,7 @@ export const DivHeader = styled.div`
     padding: 15px;
     margin-bottom: 30px;
     border-bottom: 1px solid #F0F0F0;
+    box-shadow: 15 15 blue;
 `
 export const Img = styled.img`
     height: 3rem;
@@ -77,6 +78,7 @@ export const CheckboxStyle = styled.div`
  border-radius:8px;
  border: 1px solid #B2B2B2;
  font-size: 12px;
+ 
 `
 export const FormContainer = styled.div`
     width: 70vw;
