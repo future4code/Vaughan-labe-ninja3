@@ -1,12 +1,13 @@
 import axios from "axios";
 import React from "react";
-import {newDate} from "./Data"
+import {newDate} from "../../Components/Outros/Data"
 import { BASE_URL, header } from "../../Constants/Url";
-import { ButtonCard, ContainerButton, ContainerJobs, BuscaContainer, InputPreco, ContainerRender, DivContainer, Img, DivButoes, PosicaoSelect, PosicaoInput, Geral, Container, StyleSelect} from "./style";
+import { ButtonCard, ButtonCard2, ContainerButton, ContainerJobs, BotaoHome, BuscaContainer, InputPreco, ContainerRender, DivContainer, Img, DivButoes, PosicaoSelect, PosicaoInput, Geral, Container, StyleSelect} from "./style";
 import Logo from "../../assets/logo-cabecalho.png"
 import AddCartImg from "../../assets/carrinho-de-compras.png"
+import Carrinho from "../../assets/car-de-compras2.png"
 import InputBase from '@material-ui/core/InputBase'
-import { InputAdornment } from "@material-ui/core";
+import { InputAdornment } from "@material-ui/core"
 
 
 export default class CardJobs extends React.Component {
@@ -93,7 +94,7 @@ export default class CardJobs extends React.Component {
                         <h3>{cards.title}</h3>
                         <p> Até {newDate (cards.dueDate)} por R${cards.price}</p>
                         <ContainerButton>
-                            <button >Ver Detalhes</button>
+                            <BotaoHome >VER DETALHES</BotaoHome>
                             <ButtonCard onClick={() => this.props.onClick(cards)}><img src={AddCartImg}/></ButtonCard>
                         </ContainerButton>
                     </ContainerRender>
@@ -117,9 +118,9 @@ export default class CardJobs extends React.Component {
                     </BuscaContainer>
 
                     <DivButoes>
-                        <button onClick={this.props.Home}>PÁGINA INICIAL</button>
+                        <BotaoHome onClick={this.props.Home}>PÁGINA INICIAL</BotaoHome>
                         <div>
-                            <button onClick={this.props.goCarrinho}>Carrinho</button>
+                            <ButtonCard2 onClick={this.props.goCarrinho}><img src={Carrinho}/></ButtonCard2>
                         </div>
                     </DivButoes>
                 </DivContainer>

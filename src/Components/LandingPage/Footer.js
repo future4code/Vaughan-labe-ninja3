@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo-cabecalho.png"
-import Face from "../assets/face.png"
-import Insta from "../assets/insta.png"
-import Twitter from "../assets/twitter.png"
-import Baixar1 from "../assets/8.png"
-import Baixar2 from "../assets/9.png"
+import Logo from "../../assets/logo-cabecalho.png"
+import Face from "../../assets/face.png"
+import Insta from "../../assets/insta.png"
+import Twitter from "../../assets/twitter.png"
+import Baixar1 from "../../assets/8.png"
+import Baixar2 from "../../assets/9.png"
 
 const DivContainer = styled.div`
     background-color: #1B0034;
@@ -18,6 +18,7 @@ const DivContato = styled.div`
     justify-content: space-between;
     align-items: start;
     margin: 50px;
+    padding: 20px;
 `
 
 const DivRedesSociais = styled.div`
@@ -37,11 +38,13 @@ const DivOutros = styled.div`
 `
 const DivTextoOutros = styled.div`
     display: flex;
+    font-size: 14px;
     gap: 40px;
     align-items: center;
     justify-content: space-evenly;
 `
 const Divtexto = styled.div`
+    font-size: 13.5px;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -54,11 +57,18 @@ const ImgLogo = styled.img`
     height: 3rem;
 `
 const Lista = styled.li`
-    color: #F8E59B;
+    color: white;
     list-style: none;
     align-items: end;
     display: grid;
     grid-template-columns: 200px 200px;
+    font-size: 13.5px;
+    gap: 8px;
+`
+
+const Separar = styled.div`
+    gap: 15px;
+    display: grid;
 `
 
 class Footer extends React.Component {
@@ -69,8 +79,8 @@ class Footer extends React.Component {
 
                 <DivContato>
 
-                    <div>
-                        <h4>SERVIÇOS</h4>
+                    <Separar>
+                        <h5>SERVIÇOS</h5>
                         <Lista>
                             <li>Assistência Técnica</li>
                             <li>Saúde</li>
@@ -83,24 +93,25 @@ class Footer extends React.Component {
                             <li>Eventos</li>
                             <li>Serviços Domésticos</li>
                         </Lista>
-                    </div>
+                    </Separar>
 
-                    <div>
-                        <h4>REDES SOCIAIS</h4>
+                    <Separar>
+                        <h5>REDES SOCIAIS</h5>
                         <DivRedesSociais>
-                            <a href="https://pt-br.facebook.com/"><Img src={Face} alt="Ícone Facebook" /></a>
-                            <a href="https://www.instagram.com/"><Img src={Insta} alt="Ícone Instagram" /></a>
-                            <a href="https://twitter.com/"><Img src={Twitter} alt="Ícone Twitter" /></a>
+                            <a target="_blank" href="https://pt-br.facebook.com/"><Img src={Face} alt="Ícone Facebook" /></a>
+                            <a target="_blank" href="https://www.instagram.com/"><Img src={Insta} alt="Ícone Instagram" /></a>
+                            <a target="_blank" href="https://twitter.com/"><Img src={Twitter} alt="Ícone Twitter" /></a>
                         </DivRedesSociais>
-                    </div>
+                    </Separar>
 
-                    <div>
-                        <h4>DOWNLOADS</h4>
+                    <Separar>
+                        <h5>DOWNLOADS</h5>
                         <DivImgDownload>
-                            <a href="https://play.google.com/store?hl=pt_BR&gl=US"><Img src={Baixar1} alt="Ícone Play Store" /></a>
-                            <a href="https://www.apple.com/br/store"><Img src={Baixar2} alt="Ícone Apple Store" /></a>
+                            <a target="_blank" href="https://play.google.com/store?hl=pt_BR&gl=US"><Img src={Baixar1} alt="Ícone Play Store" /></a>
+                            <a target="_blank" href="https://www.apple.com/br/store"><Img src={Baixar2} alt="Ícone Apple Store" /></a>
                         </DivImgDownload>
-                    </div>
+                    </Separar>
+
                 </DivContato>
 
                 <DivOutros>

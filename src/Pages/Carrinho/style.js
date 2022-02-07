@@ -18,10 +18,11 @@ export const Img = styled.img`
 export const DivButoes = styled.div`
     display: flex;
     gap: 30px;
+    align-items: center;
 `
 export const ButtonService = styled.button`
 color: #F8E59B;
-font-size: 17px;
+font-size: 13px;
 background-color: transparent;
 border: 0;
 cursor: pointer;
@@ -32,12 +33,23 @@ img{
    object-fit: cover;
 }
 `
-
+export const ButtonService2 = styled.button`
+color: #F8E59B;
+background: transparent;
+border-radius: 15px;
+border: none;
+width: 120px;
+height: 30px;
+&:hover {
+cursor: pointer;
+background-color: rgba(255,255,255, 0.25);
+`
 export const ContainerCarrinho = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
+font.size: 
 `
 export const Contratar = styled.div`
 display: flex;
@@ -48,7 +60,7 @@ width: 38vw;
 `
 export const PStyle = styled.p`
 color: #1B0034;
-font-size: 25px;
+font-size: 20px;
 `
 export const ButtonContrat = styled.button`
 color: #FFFFFF;
@@ -58,7 +70,6 @@ height: 40px;
 width: 13vw;
 border-radius: 10px;
 cursor: pointer;
-font-size: 15px;
 &:hover{
     background-color: black;
 }

@@ -1,7 +1,7 @@
 import React from "react"
-import { DivBackground, DivHeader, Img, DivButoes, Container, CheckboxStyle, FormContainer, ButtonForm, DivContainer } from "./FormStyle"
+import { DivBackground, DivHeader, Img, DivButoes, BotaoHome, Container, CheckboxStyle, FormContainer, ButtonForm, DivContainer } from "./FormStyle"
 import { BASE_URL, header } from "../../Constants/Url";
-import Logo from "../../Components/img/logo-cabecalho.png"
+import Logo from "../../assets/logo-cabecalho.png"
 import axios from "axios"
 import { Checkbox } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
@@ -9,7 +9,6 @@ import { FormGroup } from "@material-ui/core";
 import { FormControlLabel } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField'
 import InputAdornment from "@material-ui/core/InputAdornment"
-import { InputLabel } from "@material-ui/core";
 
 
 class Formulario extends React.Component {
@@ -120,13 +119,13 @@ ${error.response.data.message}`)
                     </div>
 
                     <DivButoes>
-                        <button onClick={this.props.Home}>PÁGINA INICIAL</button>
+                        <BotaoHome onClick={this.props.Home}>PÁGINA INICIAL</BotaoHome>
                     </DivButoes>
                 </DivHeader>
 
                 <DivContainer>
                     <Container>
-                        <h1>Cadastre seu serviço</h1>
+                        <h2>CADASTRE SEU SERVIÇO</h2>
 
                         <FormContainer>
                             <TextField

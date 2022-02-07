@@ -11,9 +11,6 @@ padding-left: 35px;
 border: 5px solid #F8E59B;
 border-radius: 10px;
 `
-export const ServiceName = styled.div`
-display: flex;
-`
 export const CartJobs = styled.div`
 display: flex;
 justify-content: flex-end;

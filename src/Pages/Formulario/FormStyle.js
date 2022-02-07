@@ -25,8 +25,8 @@ export const DivButoes = styled.div`
 
 export const Container = styled.div`
 
-  width: 700px;
-  height: 700px;
+  width: 620px;
+  height: 620px;
   background-color: #F0F0F0;
   border-radius: 30px;
   padding: 15px;
@@ -93,4 +93,17 @@ export const DivContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+`
+
+export const BotaoHome = styled.button`
+    color: #F8E59B;
+    background: transparent;
+    border-radius: 15px;
+    border: none;
+    width: 120px;
+    height: 30px;
+&:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.25);
+}
 `
