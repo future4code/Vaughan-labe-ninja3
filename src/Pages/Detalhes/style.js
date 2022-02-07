@@ -17,7 +17,7 @@ export const ButtonContrat = styled.button`
 color: #1B0034;
 border: 3px solid #1B0034; 
 height: 40px;
-width: 20%;
+width: 25%;
 border-radius: 10px;
 cursor: pointer;
 `
@@ -25,7 +25,7 @@ cursor: pointer;
 export const StyleCard = styled.div`
   color:  #1B0034;
   margin: 20px;
-  width: 20%;
+  width: 25%;
   height: 20rem;
   background-color: #F8E59B;
   padding: 20px;
@@ -59,7 +59,7 @@ export const BotaoHome = styled.button`
 export const ButtonCard = styled.button`
 border: 3px solid #1B0034; 
 height: 40px;
-width: 20vw;
+width: 25vw;
 border-radius: 10px;
 background-color: #1B0034;
 color: #FFFFFF;
