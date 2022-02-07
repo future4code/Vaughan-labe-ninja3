@@ -23,3 +23,30 @@ Segue em anexo o link contendo o layout das páginas do site para uma melhor apr
 As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe e iniciaremos a construção do site mediante sua aprovação.
 
 Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
+
+### O que funciona
+- Todos os botões direcionam para as devidas informações;
+- Interação entre as páginas;
+- Formulário de cadastro;
+- Adicionar item ao carrinho;
+- Remover itens do carrinho;
+- Filtragem por título, preço, data (crescente e decrescente);
+- Busca por título.
+
+OBS:. Algumas das funcionalidades acabam carregando apenas quando o app é executado pelo terminal .
+
+### O que não funciona
+- Algumas das funcionalidades acabam carregando apenas quando o app é executado pelo terminal .
+
+### Link Surge 
+https://site-labeninjas3.surge.sh/
+
+### Imagens
+![image](https://user-images.githubusercontent.com/94838711/152719993-d92d4452-b046-449f-a3a1-fbd0e4b8bb71.png)
+![image](https://user-images.githubusercontent.com/94838711/152720027-43b64e28-6c13-4670-bb6e-3175170c86a4.png)
+![image](https://user-images.githubusercontent.com/94838711/152720052-2611a7bd-e34b-467b-9675-f5240a792fff.png)
+![image](https://user-images.githubusercontent.com/94838711/152720086-cee451b7-553d-4054-a61a-f817f58cd1ad.png)
+![image](https://user-images.githubusercontent.com/94838711/152720125-a9055957-9a1b-4627-9154-18c1b8ccdc44.png)
+![WhatsApp Image 2022-02-07 at 14 49 19](https://user-images.githubusercontent.com/94838711/152843826-2c07c010-8143-4b22-b79f-d3d7d6abce6e.jpeg)
+![image](https://user-images.githubusercontent.com/94838711/152720146-f48f6358-8909-4820-a719-60a60fddcaca.png)
+![image](https://user-images.githubusercontent.com/94838711/152720202-c1b4d6d8-afbe-4bcb-895c-42f9650b2f37.png)
