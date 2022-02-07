@@ -14,16 +14,6 @@ Segue abaixo paleta de cores:
 - ![#F0F0F0](https://via.placeholder.com/15/F0F0F0/000000?text=+) `#F0F0F0`
 - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `#FFFFFF`
 
-## LAYOUT DO SITE
-Segue em anexo o link contendo o layout das páginas do site para uma melhor apreciação do cliente.
-
-- https://drive.google.com/file/d/116UqOaD3zf_CSNukUJ-xn9tkDA0iHTIQ/view?usp=sharing
-- https://drive.google.com/file/d/1OPO6aaIiJXbpiaGZoWKC1dSJtDABrfox/view?usp=sharing
-
-As devidas tarefas para criação do site já foram distribuídas entre os membros de nossa equipe e iniciaremos a construção do site mediante sua aprovação.
-
-Ficamos à disposição para qualquer dúvida ou sugestão a respeito do projeto.
-
 ### O que funciona
 - Todos os botões direcionam para as devidas informações;
 - Interação entre as páginas;
@@ -39,7 +29,7 @@ OBS:. Algumas das funcionalidades acabam carregando apenas quando o app é execu
 - Algumas das funcionalidades acabam carregando apenas quando o app é executado pelo terminal .
 
 ### Link Surge 
-https://site-labeninjas3.surge.sh/
+# https://site-labeninjas3.surge.sh/
 
 ### Imagens
 ![image](https://user-images.githubusercontent.com/94838711/152719993-d92d4452-b046-449f-a3a1-fbd0e4b8bb71.png)
