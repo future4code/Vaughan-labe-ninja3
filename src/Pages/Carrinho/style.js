@@ -49,7 +49,6 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
-font.size: 
 `
 export const Contratar = styled.div`
 display: flex;
