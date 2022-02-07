@@ -94,7 +94,7 @@ export default class CardJobs extends React.Component {
                         <h3>{cards.title}</h3>
                         <p> Até {newDate (cards.dueDate)} por R${cards.price}</p>
                         <ContainerButton>
-                            <BotaoHome >VER DETALHES</BotaoHome>
+                            <BotaoHome onClick={() => this.props.goToDetails(cards.id)}>VER DETALHES</BotaoHome>
                             <ButtonCard onClick={() => this.props.onClick(cards)}><img src={AddCartImg}/></ButtonCard>
                         </ContainerButton>
                     </ContainerRender>
