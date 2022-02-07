@@ -12,6 +12,7 @@ class App extends React.Component {
 		page: "Home",
 		cart: [],
 		priceAll: 0,
+		detailId: ""
 	}
 
 	componentDidMount() {
@@ -81,7 +82,7 @@ goToCarrinho = () => {
 	this.setState({ page: "Carrinho" })
 }
 goToDetails = (id) => {
-	this.setState({ page: "Detalhes", selecionarId: id })
+	this.setState({ page: "Detalhes", detailId: id })
 }
 
 ChangeScreen = () => {
@@ -96,7 +97,7 @@ ChangeScreen = () => {
 			return <Carrinho priceAll={this.state.priceAll} cart={this.state.cart} Home={this.goToHome}
 				deleteCards={this.deleteCards} voltar={this.goToContratacao} service={this.serviceContrated} />
 		case "Detalhes":
-			return <PaginaDetalhes id={this.state.selecionarId} contratar={this.goToContratacao} Home={this.goToHome} />
+			return <PaginaDetalhes id={this.state.detailId} contratar={this.goToContratacao} Home={this.goToHome} />
 		default:
 			return "Home"
 	}
