@@ -3,7 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@mui/styled-engine-sc": "^5.3.0",
+=======
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+>>>>>>> 4a55dbc0f4497179f019af81a67179407d7a29c0
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
