@@ -38,10 +38,13 @@ class App extends React.Component {
 
 seizeJobs = () => {
 	const jobs = JSON.parse(localStorage.getItem("jobs"))
+	if(jobs){
 	this.setState({ cart: jobs })
-
+	}
 	const newValue = Number(localStorage.getItem("total"))
+	if(newValue){
 	this.setState({ priceAll: newValue })
+	}
 }
 valueAll = (price) => {
 	this.setState({ priceAll: this.state.priceAll + price })
@@ -88,7 +91,7 @@ ChangeScreen = () => {
 		case "Home":
 			return <LandingPage contratar={this.goToContratacao} cadastrar={this.goToCadastro} />
 		case "Contratacao":
-			return <CardJobs onClick={this.addInCart} goCarrinho={this.goToCarrinho} goToDetails={this.goToDetails} Home={this.goToHome} />
+			return <CardJobs addInCart={this.addInCart} goCarrinho={this.goToCarrinho} goToDetails={this.goToDetails} Home={this.goToHome} />
 		case "Cadastro":
 			return <Formulario Home={this.goToHome} />
 		case "Carrinho":

@@ -25,8 +25,8 @@ cursor: pointer;
 export const StyleCard = styled.div`
   color:  #1B0034;
   margin: 20px;
-  width: 25%;
-  height: 20rem;
+  width: 27%;
+  height: 25rem;
   background-color: #F8E59B;
   padding: 20px;
   border-radius: 8px;

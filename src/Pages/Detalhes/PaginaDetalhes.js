@@ -8,12 +8,12 @@ import { Typography } from "@material-ui/core"
 import { DivContainer, Img, ButtonContrat, StyleCard, StyleDetail, BotaoHome, ButtonCard, ButtonDirection, ButtonCard2, ContainerButton, TextoInfo, Info, H5, Container, ChipStyle} from "./style";
 import { ThemeProvider } from '@material-ui/core/styles';
 import {Theme} from  '../../Components/Outros/Theme'
+import Loading from "../../Components/Outros/Loading/Loading"
 
 class ServiceDetail extends React.Component {
   state = {
-    isLoading: true,
+    loading: false,
     listJobs: {},
-    isOnCart: false
   }
 
   componentDidMount() {
@@ -21,12 +21,15 @@ class ServiceDetail extends React.Component {
   }
 
   getJob = () => {
+    this.setState({loading: true})
     axios.get(`${BASE_URL}/jobs/${this.props.id}`, header)
       .then((res) => {
         this.setState({ listJobs: res.data })
+        this.setState({loading: false})
       })
       .catch((err) => {
         alert(err, "Ocorreu algum erro!")
+        this.setState({loading: false})
       })
   }
 
@@ -50,11 +53,11 @@ class ServiceDetail extends React.Component {
           </ContainerButton>
         </DivContainer>
         <StyleDetail>
-          <StyleCard>
+       {this.state.loading? <Loading /> :
+         <StyleCard>
             <div>
               {this.state.listJobs.title && <h1>{this.state.listJobs.title}</h1>}
             </div>
-
             
             <TextoInfo>
             <Container>
@@ -71,12 +74,13 @@ class ServiceDetail extends React.Component {
               {this.state.listJobs.description && <H5>Descrição: {this.state.listJobs.description}</H5>}
             </TextoInfo>
 
-          </StyleCard>
+          </StyleCard>}
 
           <ButtonDirection>
             <ButtonCard onClick={() => this.props.addCart(this.state.listJobs)}> ADICIONAR AO CARRINHO</ButtonCard>
           </ButtonDirection>
           <ButtonContrat onClick={this.props.contratar}> ⬅ VOLTAR PARA LISTA</ButtonContrat>
+          
         </StyleDetail>
 
       </ThemeProvider>
