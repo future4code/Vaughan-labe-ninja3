@@ -10,7 +10,7 @@ import InputBase from '@material-ui/core/InputBase'
 import { InputAdornment } from "@material-ui/core"
 import { ThemeProvider } from '@material-ui/core/styles';
 import {Theme} from  '../../Components/Outros/Theme';
-
+import Loading from "../../Components/Outros/Loading/Loading";
 
 export default class CardJobs extends React.Component {
     state = {
@@ -20,6 +20,7 @@ export default class CardJobs extends React.Component {
         precoMin: "",
         precoMax: "",
         ordenar: 1,
+        loading: false
     }
 
     componentDidMount() {
@@ -57,13 +58,15 @@ export default class CardJobs extends React.Component {
     }
 
     getAllJobss = () => {
+        this.setState({loading: true})
         axios.get(`${BASE_URL}/jobs`, header)
             .then((res) => {
                 this.setState({ listJobs: res.data.jobs })
-
+                this.setState({loading: false})
             })
             .catch((error) => {
                 alert(`Ocorreu um erro, tente novamente!`)
+                this.setState({loading: false})
             })
     }
 
@@ -97,7 +100,7 @@ export default class CardJobs extends React.Component {
                         <p> Até {newDate (cards.dueDate)} por R${cards.price}</p>
                         <ContainerButton>
                             <BotaoHome onClick={() => this.props.goToDetails(cards.id)}>VER DETALHES</BotaoHome>
-                            <ButtonCard onClick={() => this.props.onClick(cards)}><img src={AddCartImg}/></ButtonCard>
+                            <ButtonCard onClick={() => this.props.addInCart(cards)}><img src={AddCartImg}/></ButtonCard>
                         </ContainerButton>
                     </ContainerRender>
                 )
@@ -186,7 +189,7 @@ export default class CardJobs extends React.Component {
                 </Geral>
 
                 <ContainerJobs>
-                    {cardRenderizado}
+                    {this.state.loading? <Loading />: cardRenderizado}
                 </ContainerJobs>
                 </ThemeProvider>
             </Container>
