@@ -29,7 +29,7 @@ OBS:. Algumas das funcionalidades acabam carregando apenas quando o app é execu
 - Algumas das funcionalidades acabam carregando apenas quando o app é executado pelo terminal .
 
 ### Link Surge 
-## https://site-labeninjas3.surge.sh/
+## https://quaint-flight.surge.sh/
 
 ### Imagens
 ![image](https://user-images.githubusercontent.com/94838711/152719993-d92d4452-b046-449f-a3a1-fbd0e4b8bb71.png)
